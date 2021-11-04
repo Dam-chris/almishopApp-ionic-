@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Productos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label><strong>Smartphones</strong></ion-label>
+  </ion-item>
+
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+    <ion-slide *ngFor="let card of cards; let i = index;" class="cardStyle">
+      <ion-col>
+        <ion-label>Card #{{ i + 1 }}</ion-label>
+        <ion-img style="pointer-events:none" src="./assets/images/alberto.jpg"></ion-img>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-item>
+    <ion-label><strong>Consolas</strong></ion-label>
+  </ion-item>
+  
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+    <ion-slide *ngFor="let card of cards; let i = index;" class="cardStyle">
+      <ion-col>
+        <ion-label>Card #{{ i + 1 }}</ion-label>
+        <ion-img style="pointer-events:none" src="./assets/images/alberto.jpg"></ion-img>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
